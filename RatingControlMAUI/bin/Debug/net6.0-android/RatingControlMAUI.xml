@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RatingControlMAUI</name>
+    </assembly>
+    <members>
+        <member name="P:RatingControlMAUI.RatingView.CanvasBackgroundColor">
+            <summary>
+            Gets or sets the color of the canvas background.
+            </summary>
+            <value>The color of the canvas background.</value>
+        </member>
+        <member name="P:RatingControlMAUI.RatingView.StrokeWidth">
+            <summary>
+            Gets or sets the width of the stroke.
+            </summary>
+            <value>The width of the stroke.</value>
+        </member>
+    </members>
+</doc>

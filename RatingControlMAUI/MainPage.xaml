@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RatingControlMAUI.MainPage"
+             xmlns:rating="clr-namespace:RatingControlMAUI"
+             xmlns:local="clr-namespace:RatingControlMAUI.Converters">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ValueToColorConverter x:Key="valueToColorConverter" />
+            <local:ValueToMoviesColorConverter x:Key="valueToMoviesColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView Padding="8,20,8,0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <rating:RatingView x:Name="ratingView1" ColorOn="{Binding Source={x:Reference Name=ratingView1}, Path=Value, Converter={StaticResource valueToColorConverter}, ConverterParameter=5}" ></rating:RatingView>
+            <rating:RatingView x:Name="ratingView2" ColorOn="#CCA43D" Grid.Row="1" PaintSurface="ratingView2_PaintSurface_1"></rating:RatingView>
+               
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
